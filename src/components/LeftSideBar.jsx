@@ -14,7 +14,7 @@ const links = [
   { to: '/Home', icon: <IoHomeSharp  />, text: 'Home' },
   { to: '/Artist', icon: <CgUserlane />, text: 'Artist' },
   { to: '/Trending', icon: <FaGripfire />, text: 'Trending' },
-  { to: '/New', icon: <IoMusicalNotes />, text: 'New' },
+  { to: '/Player', icon: <IoMusicalNotes />, text: 'New' },
   { to: '', icon: " ", text: 'Library' },
   { to: '/NewPlaylist', icon: <MdFormatListBulletedAdd />, text: 'New Playlist' },
   { to: '/Favorite', icon: <FaHeartbeat />, text: 'Favorite' },

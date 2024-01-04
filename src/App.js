@@ -14,6 +14,8 @@ import Artists from './components/Artists';
 import AudioPlayer from './components/AudioPlayer/AudioPlayer';
 import SearchResult from './components/Common/SearchResult';
 import AddAlbum from './components/Common/AddAlbum';
+// import Login from './components/Auth/Login';
+import Signup from './components/Auth/Signup';
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
        <Route path='/AlbumSongs' element = {<AlbumSongList></AlbumSongList>}></Route>
        <Route path='/SearchResult' element = {<SearchResult></SearchResult>}></Route>
        <Route path='/AddAlbum' element = {<AddAlbum></AddAlbum>}></Route>
+       {/* <Route path='/Login' element = {<Login></Login>}></Route> */}
+       <Route path='/Signup' element = {<Signup></Signup>}></Route>
        </Routes>
       </div>
     </div>

@@ -4,7 +4,7 @@ import { BsMusicNoteBeamed } from 'react-icons/bs';
 
 import { setNextIndex,setPrevIndex } from '../../slices/album';
 
-const DisplayTrack = ({
+const MobilePlayer = ({
   currentTrack,
   audioRef,
   setDuration,
@@ -25,17 +25,19 @@ const DisplayTrack = ({
   useEffect(()=>{},currentTrack,title);
 
   return (
-    <div className='hidden lg:block md:block'>
+    <div className='  bg-cover bg-no-repeat   ' 
+     style={{ backgroundImage: `url(${thumbnail})` }}
+    >
       <audio
         src={src}
         ref={audioRef}
         onLoadedMetadata={onLoadedMetadata}
         onEnded={()=> dispatch(setNextIndex(1))}
       />
-      <div className=" flex items-center justify-center gap-2 ">
+      <div className=" flex items-center flex-col justify-center gap-2 w-full h-[400px]  backdrop-blur-sm ">
         <div className="audio-image">
           {currentTrack.thumbnail ? (
-            <img src={thumbnail} alt="audio avatar" className='w-[100px] h-[70px]' />
+            <img src={thumbnail} alt="audio avatar" className='w-[200px] h-[200px]' />
           ) : (
             <div className="icon-wrapper">
               <span className="audio-icon">
@@ -52,4 +54,4 @@ const DisplayTrack = ({
     </div>
   );
 };
-export default DisplayTrack;
+export default MobilePlayer;

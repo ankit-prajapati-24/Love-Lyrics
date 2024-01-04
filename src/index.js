@@ -7,8 +7,11 @@ import { BrowserRouter, RouterProvider } from 'react-router-dom';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers'
-
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import { Toaster } from 'react-hot-toast';
+const id = "25830659239-085c4n7pb1jgksvu7i04jih6k035h462.apps.googleusercontent.com";
+const SECRET_KEY = "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";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const store = configureStore({
   reducer:rootReducer
@@ -16,7 +19,11 @@ const store = configureStore({
 root.render(
   <Provider store = {store}>
   <BrowserRouter>
+  
+<GoogleOAuthProvider clientId="109968385356-3r8d1o58i1176mqd0tb3c72vdjo7ecan.apps.googleusercontent.com">
       <App />
+</GoogleOAuthProvider>;
+
       <Toaster></Toaster>
   </BrowserRouter>
   </Provider>

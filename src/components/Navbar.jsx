@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
 import { setquery } from '../slices/UserDataSlice';
+import { Link } from 'react-router-dom';
 import { setsearch } from '../slices/UserDataSlice';
 const Navbar = () => {
     const query = useSelector((state) => state.User.query);
@@ -63,9 +64,13 @@ useEffect(() => {
 }
         <div className='flex items-center justify-center p-2  max-w-[400px] gap-3'>
  
-            <buttoo className=" max-w-[400px] p-2 border border-white rounded-md flex items-center justify-center hover:scale-95 transition-all duration-200 text-sm min-w-[60px]">Log in</buttoo>
-            <buttoo className=" max-w-[400px] p-2 border border-white rounded-md flex items-center justify-center hover:scale-95 transition-all duration-200 text-sm min-w-[70px]">sign up </buttoo>
-
+          <Link to="/Login">
+          <button className=" max-w-[400px] p-2 border border-white rounded-md flex items-center justify-center hover:scale-95 transition-all duration-200 text-sm min-w-[60px]">Log in</button>
+          </Link>
+          <Link to="/Signup">
+          <button className=" max-w-[400px] p-2 border border-white rounded-md flex items-center justify-center hover:scale-95 transition-all duration-200 text-sm min-w-[60px]">SignUp</button>
+          </Link>
+          
         <FaUserCircle className='h-5 w-5 text-[#61dafb]' style={{ height: '30px', width: '30px', }} />
         </div>
 </div>
